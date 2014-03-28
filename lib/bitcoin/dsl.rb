@@ -150,7 +150,16 @@ module Bitcoin::DSL
   def gettransaction(txid)
     bitcoin.gettransaction txid
   end
-  
+
+  # Get raw infomation about +txid+
+  def getrawtransaction(txid)
+    bitcoin.getrawtransaction txid
+  end
+
+  def decoderawtransaction(data)
+    bitcoin.decoderawtransaction data
+  end
+
   # If +data+ is not specified, returns formatted hash data to work on:
   #
   #  :midstate => precomputed hash state after hashing the first half of the data
@@ -253,6 +262,8 @@ module Bitcoin::DSL
   alias received_by_account getreceivedbyaccount
   alias received_by_address getreceivedbyaddress
   alias transaction gettransaction
+  alias raw_transaction getrawtransaction
+  alias decode_raw_transaction decoderawtransaction
   alias work getwork
   alias get_work getwork
   alias accounts listaccounts

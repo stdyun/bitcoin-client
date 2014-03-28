@@ -121,6 +121,16 @@ class Bitcoin::Client
     @api.request 'gettransaction', txid
   end
 
+  # Get raw information about +txid+
+  def getrawtransaction(txid)
+    @api.request 'getrawtransaction', txid
+  end
+
+  # Decode the raw transaction
+  def decoderawtransaction(data)
+    @api.request 'decoderawtransaction', data
+  end
+
   # If +data+ is not specified, returns formatted hash data to work on:
   #
   #  :midstate => precomputed hash state after hashing the first half of the data
@@ -249,6 +259,8 @@ class Bitcoin::Client
   alias received_by_account getreceivedbyaccount
   alias received_by_address getreceivedbyaddress
   alias transaction gettransaction
+  alias raw_transaction getrawtransaction
+  alias decode_raw_transaction decoderawtransaction
   alias work getwork
   alias get_work getwork
   alias accounts listaccounts
