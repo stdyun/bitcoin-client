@@ -243,6 +243,10 @@ class Bitcoin::Client
     @api.request 'walletlock'
   end
 
+  def keypoolrefill
+    @api.request 'keypoolrefill'
+  end
+
   alias account getaccount
   alias account_address getaccountaddress
   alias addresses_by_account getaddressesbyaccount

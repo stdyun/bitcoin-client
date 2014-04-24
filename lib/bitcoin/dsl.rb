@@ -75,7 +75,8 @@ module Bitcoin::DSL
     :setaccount,
     :setgenerate,
     :stop,
-    :validateaddress
+    :validateaddress,
+    :keypoolrefill
 
   def_delegators :bitcoin,
     :account,
