@@ -69,6 +69,7 @@ module Bitcoin::DSL
     :listreceivedbyaccount,
     :listreceivedbyaddress,
     :listtransactions,
+    :listsinceblock,
     :move,
     :sendfrom,
     :sendtoaddress,
