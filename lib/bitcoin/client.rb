@@ -20,6 +20,10 @@ class Bitcoin::Client
     @api = Bitcoin::API.new({ :user => user, :pass => pass }.merge(options))
   end
 
+  def request(method, *args)
+    @api.request method, *args
+  end
+
   # Safely copies wallet.dat to destination, which can be a directory or a path with filename.
   def backupwallet(destination)
     @api.request 'backupwallet', destination
