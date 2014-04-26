@@ -73,6 +73,7 @@ module Bitcoin::DSL
     :move,
     :sendfrom,
     :sendtoaddress,
+    :settxfee,
     :setaccount,
     :setgenerate,
     :stop,

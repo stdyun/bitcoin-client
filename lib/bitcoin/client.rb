@@ -199,6 +199,10 @@ class Bitcoin::Client
     @api.request 'sendtoaddress', bitcoinaddress, amount, comment, comment_to
   end
 
+  def settxfee(amount)
+    @api.request 'settxfee', amount
+  end
+
   def sendmany(fromaccount, addresses_amounts, minconf = 1, comment = nil)
     @api.request 'sendmany', fromaccount, addresses_amounts, minconf, comment
   end
